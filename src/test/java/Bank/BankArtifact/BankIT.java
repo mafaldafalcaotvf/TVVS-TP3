@@ -29,7 +29,9 @@ public class BankIT {
 	@Test
 	public void testDepositAmount() {
 		// use the functions depositAccount(Client,float) & getClientByName(String) from Bank 
-		assertTrue(false);
+		bank.depositAccount(bank.getClientByName("Carlos"), 130);
+		float saldo = bank.getClientByName("Carlos").getAccount().getAmount();
+		assertEquals(130, saldo,floatTolerance);
 	}
 	
 	@Test	
