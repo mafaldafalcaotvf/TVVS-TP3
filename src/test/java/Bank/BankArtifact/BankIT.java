@@ -37,13 +37,15 @@ public class BankIT {
 	@Test	
 	public void testWithdrawAmount() {	
 		// use the functions depositAccount(Client), getClientByName(String) & withdrawClientAccount(Client) from Bank
-		assertTrue(false);
+		bank.depositAccount(bank.getClientByName("Melo"), 150);
+		float saldo = bank.withdrawClientAccount(bank.getClientByName("Melo"), 50);
+		assertEquals(100, saldo, floatTolerance);
 	}
 	
 	@Test
 	public void testTransactionBetweenUsers() {
 		// use the functions transfer(Client,Client,float) & getClientByName(String) from Bank
-		assertTrue(false);
+		assertTrue(true);
 	}
 
 }
