@@ -38,7 +38,8 @@ public class BankIT {
 	public void testWithdrawAmount() {	
 		// use the functions depositAccount(Client), getClientByName(String) & withdrawClientAccount(Client) from Bank
 		bank.depositAccount(bank.getClientByName("Melo"), 150);
-		float saldo = bank.withdrawClientAccount(bank.getClientByName("Melo"), 50);
+		bank.withdrawClientAccount(bank.getClientByName("Melo"), 50);
+		float saldo = bank.getClientByName("Melo").getAccount().getAmount();
 		assertEquals(100, saldo, floatTolerance);
 	}
 	
